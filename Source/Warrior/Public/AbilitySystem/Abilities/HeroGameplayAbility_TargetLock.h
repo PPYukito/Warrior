@@ -8,6 +8,7 @@
 #include "HeroGameplayAbility_TargetLock.generated.h"
 
 class UWarriorWidgetBase;
+class UInputMappingContext;
 
 /**
  * 
@@ -32,9 +33,13 @@ private:
 	AActor* GetNearestTargetFromAvailableActors(const TArray<AActor*>& InAvialableActors);
 	void DrawTargetLockWidget();
 	void SetTargetLockWidegetPosition();
+	void InitTargetLockMovement();
+	void InitTargetLockMappingContext();
 
 	void CancelTargetLockAbility();
 	void CleanUp();
+	void ResetTargetLockMovement();
+	void ResetTargetLockMappingContext();
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	float BoxTraceDistance = 5000.f;
@@ -51,6 +56,15 @@ private:
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	TSubclassOf<UWarriorWidgetBase> TargetLockWidgetClass;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockRotationInterpSpeed = 5.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockMaxWalkSpeed = 150.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	UInputMappingContext* TargetLockMappingContext;
+
 	UPROPERTY()
 	TArray<AActor*> AvailableActorsToLock;
 
@@ -62,4 +76,7 @@ private:
 
 	UPROPERTY()
 	FVector2D TargetLockWidgetSize = FVector2D::ZeroVector;
+
+	UPROPERTY()
+	float CachedDefaultMaxWalkSpeed = 0.f;
 };
