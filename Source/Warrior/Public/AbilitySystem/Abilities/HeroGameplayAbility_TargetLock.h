@@ -27,10 +27,15 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void OnTargetLockTick(float DeltaTime);
 
+	UFUNCTION(BlueprintCallable)
+	void SwitchTarget(const FGameplayTag& InSwitchDirection);
+
 private:
 	void TryLockOnTarget();
 	void GetAvailableActorToLock();
 	AActor* GetNearestTargetFromAvailableActors(const TArray<AActor*>& InAvialableActors);
+	void GetAvailableActorsAroundTarget(TArray<AActor*>& OutActorsOnLeft, TArray<AActor*>& OutActorsOnRight);
+
 	void DrawTargetLockWidget();
 	void SetTargetLockWidegetPosition();
 	void InitTargetLockMovement();
@@ -64,6 +69,12 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
 	UInputMappingContext* TargetLockMappingContext;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockOffsetPitch = 10.f;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Target Lock")
+	float TargetLockOffsetYaw = 10.f;
 
 	UPROPERTY()
 	TArray<AActor*> AvailableActorsToLock;
