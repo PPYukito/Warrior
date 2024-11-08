@@ -15,6 +15,7 @@
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/HeroUIComponent.h"
 #include "AbilitySystemBlueprintLibrary.h"
+#include "GameModes/WarriorBaseGameMode.h"
 
 #include "WarriorDebugHelper.h"
 
@@ -64,22 +65,37 @@ void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 
-	//Debug Message
-	/*if (WarriorAbilitySystemComponent && WarriorAttributeSet)
-	{
-		const FString ASCText = FString::Printf(TEXT("Owner Actor: %s, AvatarActor: %s")
-			, *WarriorAbilitySystemComponent->GetOwnerActor()->GetActorLabel()
-			, *WarriorAbilitySystemComponent->GetAvatarActor()->GetActorLabel());
-
-		Debug::Print(TEXT("Ability system component valid, ") + ASCText, FColor::Green);
-		Debug::Print(TEXT("Attribute Set valid, ") + ASCText, FColor::Cyan);
-	}*/
-
 	if (!CharacterStartUpData.IsNull())
 	{
 		if (UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.LoadSynchronous())
 		{
-			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
+			int32 AbilityApplyLevel = 1;
+			if (AWarriorBaseGameMode* BaseGameMode = GetWorld()->GetAuthGameMode<AWarriorBaseGameMode>())
+			{
+				switch (BaseGameMode->GetCurrentGameDifficulty())
+				{
+				case EWarriorGameDifficulty::Easy:
+					AbilityApplyLevel = 1;
+					Debug::Print(TEXT("Currrent Difficulty : Easy"));
+					break;
+				case EWarriorGameDifficulty::Normal:
+					AbilityApplyLevel = 2;
+					Debug::Print(TEXT("Currrent Difficulty : Normal"));
+					break;
+				case EWarriorGameDifficulty::Hard:
+					AbilityApplyLevel = 3;
+					Debug::Print(TEXT("Currrent Difficulty : Hard"));
+					break;
+				case EWarriorGameDifficulty::Impossible:
+					AbilityApplyLevel = 4;
+					Debug::Print(TEXT("Currrent Difficulty : Impossible"));
+					break;
+				default:
+					break;
+				}
+			}
+
+			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent, AbilityApplyLevel);
 		}
 	}
 }

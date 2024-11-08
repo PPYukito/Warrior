@@ -7,8 +7,20 @@
 #include "Kismet/GameplayStatics.h"
 #include "Engine/TargetPoint.h"
 #include "NavigationSystem.h"
+#include "WarriorFunctionLibrary.h"
 
 #include "WarriorDebugHelper.h"
+
+void AWarriorSurvivalGameMode::InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage)
+{
+	Super::InitGame(MapName, Options, ErrorMessage);
+
+	EWarriorGameDifficulty SavedGameDifficulty;
+	if (UWarriorFunctionLibrary::TryLoadSavedGameDifficulty(SavedGameDifficulty))
+	{
+		CurrentGameDifficulty = SavedGameDifficulty;
+	}
+}
 
 void AWarriorSurvivalGameMode::BeginPlay()
 {
@@ -96,6 +108,8 @@ void AWarriorSurvivalGameMode::PreloadNextWaveEnemies()
 		return;
 	}
 
+	PreLoadedEnemyClassMap.Empty();
+
 	for (const FWarriorEnemyWaveSpawnerInfo& SpawnerInfo : GetCurrentWaveSpawnerTableRow()->EnemyWaveSpawnerDefinition)
 	{
 		if (SpawnerInfo.SoftEnemyClassToSpawn.IsNull()) continue;
@@ -108,8 +122,6 @@ void AWarriorSurvivalGameMode::PreloadNextWaveEnemies()
 					if (UClass* LoadedEnemyClass = SpawnerInfo.SoftEnemyClassToSpawn.Get())
 					{
 						PreLoadedEnemyClassMap.Emplace(SpawnerInfo.SoftEnemyClassToSpawn, LoadedEnemyClass);
-
-						Debug::Print(LoadedEnemyClass->GetName() + TEXT(" is loaded."));
 					}
 				}
 			)
@@ -165,6 +177,8 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 
 			if (SpawnEnemy)
 			{
+				SpawnEnemy->OnDestroyed.AddUniqueDynamic(this, &ThisClass::OnEnemyDestroyed);
+
 				EnemiesSpawnThisTime++;
 				TotalSpawnedEnemiesThisWaveCounter++;
 			}
@@ -182,4 +196,36 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 bool AWarriorSurvivalGameMode::ShouldKeepSpawnEnemies() const
 {
 	return TotalSpawnedEnemiesThisWaveCounter < GetCurrentWaveSpawnerTableRow()->TotalEnemytoSpawnThisWave;
+}
+
+void AWarriorSurvivalGameMode::OnEnemyDestroyed(AActor* DestroyedActor)
+{
+	CurrentSpawnEnemiesCounter--;
+
+	//Debug::Print(FString::Printf(TEXT("Current Spawn Enemy Counter: %i, Total Enemy Wave Counter: %i"), CurrentSpawnEnemiesCounter, TotalSpawnedEnemiesThisWaveCounter));
+
+	if (ShouldKeepSpawnEnemies())
+	{
+		CurrentSpawnEnemiesCounter += TrySpawnWaveEnemies();
+	}
+	else if (CurrentSpawnEnemiesCounter == 0)
+	{
+		TotalSpawnedEnemiesThisWaveCounter = 0;
+		CurrentSpawnEnemiesCounter = 0;
+
+		SetCurrentSurvivalGameModeState(EWarriorSurvivalGameModeState::WaveCompleted);
+	}
+}
+
+void AWarriorSurvivalGameMode::RegisterSpawnedEnemies(const TArray<AWarriorEnemyCharacter*>& InEnemiesToRegister)
+{
+	for (AWarriorEnemyCharacter* SpawnedEnemy : InEnemiesToRegister)
+	{
+		if (SpawnedEnemy)
+		{
+			CurrentSpawnEnemiesCounter++;
+
+			SpawnedEnemy->OnDestroyed.AddUniqueDynamic(this, &ThisClass::OnEnemyDestroyed);
+		}
+	}
 }
