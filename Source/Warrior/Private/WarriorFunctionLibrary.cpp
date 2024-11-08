@@ -10,10 +10,13 @@
 #include "WarriorGameplayTags.h"
 #include "WarriorTypes/WarriorCountDownAction.h"
 #include "WarriorGameInstance.h"
+<<<<<<< HEAD
 #include "Kismet/GameplayStatics.h"
 #include "SaveGame/WarriorSaveGame.h"
 
 #include "WarriorDebugHelper.h"
+=======
+>>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99
 
 UWarriorAbilitySystemComponent* UWarriorFunctionLibrary::NativeGetWarriorASCFromActor(AActor* InActor)
 {
@@ -240,6 +243,7 @@ void UWarriorFunctionLibrary::ToggleInputMode(const UObject* WorldContextObject,
         break;
     }
 }
+<<<<<<< HEAD
 
 void UWarriorFunctionLibrary::SaveCurrentGameDifficulty(EWarriorGameDifficulty InDifficultyToSave)
 {
@@ -273,3 +277,5 @@ bool UWarriorFunctionLibrary::TryLoadSavedGameDifficulty(EWarriorGameDifficulty&
 
     return false;
 }
+=======
+>>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99

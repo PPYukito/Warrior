@@ -2,6 +2,7 @@
 
 
 #include "WarriorGameInstance.h"
+<<<<<<< HEAD
 #include "MoviePlayer.h"
 
 void UWarriorGameInstance::Init()
@@ -26,6 +27,8 @@ void UWarriorGameInstance::OnDestinationWorldLoaded(UWorld* LoadedWorld)
 {
 	GetMoviePlayer()->StopMovie();
 }
+=======
+>>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99
 
 TSoftObjectPtr<UWorld> UWarriorGameInstance::GetGameLevelByTag(FGameplayTag InTag) const
 {
