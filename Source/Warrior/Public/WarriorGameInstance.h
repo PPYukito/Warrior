@@ -33,7 +33,6 @@ class WARRIOR_API UWarriorGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
-<<<<<<< HEAD
 public:
 	virtual void Init() override;
 
@@ -41,9 +40,7 @@ protected:
 	virtual void OnPreLoadMap(const FString& MapName);
 	virtual void OnDestinationWorldLoaded(UWorld* LoadedWorld);
 
-=======
 protected:
->>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	TArray<FWarriorGameLevelSet> GameLevelSets;
 

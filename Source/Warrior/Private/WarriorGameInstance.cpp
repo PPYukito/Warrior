@@ -2,7 +2,6 @@
 
 
 #include "WarriorGameInstance.h"
-<<<<<<< HEAD
 #include "MoviePlayer.h"
 
 void UWarriorGameInstance::Init()
@@ -15,20 +14,18 @@ void UWarriorGameInstance::Init()
 
 void UWarriorGameInstance::OnPreLoadMap(const FString& MapName)
 {
-	FLoadingScreenAttributes LoadindScreenAttributes;
-	LoadindScreenAttributes.bAutoCompleteWhenLoadingCompletes = true;
-	LoadindScreenAttributes.MinimumLoadingScreenDisplayTime = 2.f;
-	LoadindScreenAttributes.WidgetLoadingScreen = FLoadingScreenAttributes::NewTestLoadingScreenWidget();
+	FLoadingScreenAttributes LoadingScreenAttributes;
+	LoadingScreenAttributes.bAutoCompleteWhenLoadingCompletes = true;
+	LoadingScreenAttributes.MinimumLoadingScreenDisplayTime = 2.f;
+	LoadingScreenAttributes.WidgetLoadingScreen = FLoadingScreenAttributes::NewTestLoadingScreenWidget();
 
-	GetMoviePlayer()->SetupLoadingScreen(LoadindScreenAttributes);
+	GetMoviePlayer()->SetupLoadingScreen(LoadingScreenAttributes);
 }
 
 void UWarriorGameInstance::OnDestinationWorldLoaded(UWorld* LoadedWorld)
 {
 	GetMoviePlayer()->StopMovie();
 }
-=======
->>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99
 
 TSoftObjectPtr<UWorld> UWarriorGameInstance::GetGameLevelByTag(FGameplayTag InTag) const
 {

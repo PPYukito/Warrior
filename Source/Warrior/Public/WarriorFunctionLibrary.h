@@ -73,13 +73,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
 	static void ToggleInputMode(const UObject* WorldContextObject, EWarriorInputMode InInputMode);
 
-<<<<<<< HEAD
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary")
 	static void SaveCurrentGameDifficulty(EWarriorGameDifficulty InDifficultyToSave);
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary")
 	static bool TryLoadSavedGameDifficulty(EWarriorGameDifficulty& OutSaveGameDifficulty);
 
-=======
->>>>>>> 75906426a0cf83f79c251367e5e15e1915cebb99
 };
