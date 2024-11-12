@@ -7,7 +7,7 @@ Controlling
 
 Moving - Use "WASD" to move character.
 
-
+![Uploading Moving_Compressed.gif…]()
 
 Equip Weapon - Press "1" above the "Q" key to euqip weapon and press agian to unequip it.
 
