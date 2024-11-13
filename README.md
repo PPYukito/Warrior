@@ -20,9 +20,11 @@ Focusing on Enemy - Press "F" to focusing on enemies
 Attacking - Click "Left Mouse Button" to use light attack and click "Right Mouse Button" to use heavy attack.
 
 "Light Attack"
+
 ![Light Attack_Compressed](https://github.com/user-attachments/assets/114f0d55-2661-4b3c-9cec-c15a5497fefe)
 
 "Heavy Attack"
+
 ![Heavy Attack_Compressed](https://github.com/user-attachments/assets/ba5503c4-3ab4-4eda-8a38-f088e94b423a)
 
 FYI : Light attack has 4 montages and heavy attack has 2 montages, you can use combo by use light attack 3 times and before you use last light attack, click "Right mouse button" to use the last move of heavy attack as a combo.
