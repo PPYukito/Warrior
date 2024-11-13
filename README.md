@@ -1,4 +1,4 @@
-I am making this game by studying the lessons on Udemy. This is the biggest game and the most advanced project I have ever made yet. And it is still not finished yet too.(Writing this currently on 2024 Oct 18).
+I am making this game by studying the lessons on Udemy. This is the biggest game and the most advanced project I have ever made yet. (Updated: Finished. 2024-Nov-13)
 
 ![image](https://github.com/user-attachments/assets/c7c76453-ad7f-42bf-8c82-4cbe63daba76)
 
