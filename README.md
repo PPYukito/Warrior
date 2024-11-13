@@ -11,22 +11,41 @@ Moving - Use "WASD" to move character.
 
 Equip Weapon - Press "1" above the "Q" key to euqip weapon and press agian to unequip it.
 
-![image](https://github.com/user-attachments/assets/50faceec-5edf-4837-aca1-69a7e6a30b16)
+![Equipping_Compressed](https://github.com/user-attachments/assets/20d0ada2-4079-446d-86e5-2f32d655b412)
 
-![image](https://github.com/user-attachments/assets/cff69845-d0a5-40b7-ab45-8c274b585a3a)
+Focusing on Enemy - Press "F" to focusing on enemies
 
-Attacking - Click "Left Mouse button" to use light attack and click "Right mouse button" to use heavy attack.
+![Focusing_Compressed](https://github.com/user-attachments/assets/a97bede7-2217-4ffc-ba2d-d1afd4d6482a)
 
-![image](https://github.com/user-attachments/assets/60141b28-db39-4a1a-a042-263686694c07)
+Attacking - Click "Left Mouse Button" to use light attack and click "Right Mouse Button" to use heavy attack.
 
-![image](https://github.com/user-attachments/assets/dd258a24-7e02-4d0e-8aa7-f218f1804d3e)
+"Light Attack"
+![Light Attack_Compressed](https://github.com/user-attachments/assets/114f0d55-2661-4b3c-9cec-c15a5497fefe)
+
+"Heavy Attack"
+![Heavy Attack_Compressed](https://github.com/user-attachments/assets/ba5503c4-3ab4-4eda-8a38-f088e94b423a)
 
 FYI : Light attack has 4 montages and heavy attack has 2 montages, you can use combo by use light attack 3 times and before you use last light attack, click "Right mouse button" to use the last move of heavy attack as a combo.
 
+"Attack Combo"
+
+Special Attack 1 - Press "Q" + "Left Mouse Button" or "Right Mouse Button" to use special attacks.
+
+"Special Attack 1" - Press "Q" + "Left Mouse Button"
+
+![Special Light_Compressed](https://github.com/user-attachments/assets/471c48fa-7692-4818-aa92-c9adc5999738)
+
+Special Attack 2 - Press "Q" + "Right Mouse Button"
+
+![Special Heavy_Compressed](https://github.com/user-attachments/assets/4e11d372-95dd-4ea8-879b-4a3c0dbd1998)
+
+Rage - Press "R" to use rage ability, you can only use this ability when red gauge is available.
+
+![Rage_Compressed2](https://github.com/user-attachments/assets/4f16bdee-40dc-47e9-be0e-9fd51bec82ed)
 
 Roll - Press "Left Shift" to Roll (This ability is able to do either you equipped weapon or not).
 
-![image](https://github.com/user-attachments/assets/6051bbcc-b739-4d78-8233-6fca6fb43b5f)
+![Rolling_Compressed](https://github.com/user-attachments/assets/444d4a87-7b12-449e-bf63-1b2faeb2b364)
 
 Sheild - While character is equipped with weapon, press "Space bar" to generate shield.
 
@@ -36,10 +55,13 @@ Perfect Guard - If you press shield at the right timing, you will see the differ
 
 Normal Guard
 
-![image](https://github.com/user-attachments/assets/1f73c9c2-7c23-4d00-9073-4abb91ee27f1)
+![Guard_Compressed](https://github.com/user-attachments/assets/0df17bed-dfd6-4566-9f45-3ccdfe4ad244)
 
 Perfect Guard
+![Perfect Guard_Compressed](https://github.com/user-attachments/assets/279014d4-c801-40fd-a813-46e92ad8fbea)
 
-![image](https://github.com/user-attachments/assets/706eba2e-254e-4b17-8d0e-f3163156453b)
+Pick up Item - When you get close to drop item stone, Press "E" to collect them.
 
+Green stones are healing item. And the orange stones are rage meter item.
 
+![Pick up item_Compressed](https://github.com/user-attachments/assets/6663c46c-32a0-4694-bbd3-81888a142823)
