@@ -46,7 +46,7 @@ Special Attack - Press "Q" + "Left Mouse Button" or "Right Mouse Button" to use 
 
 Rage - Press "R" to use rage ability, you can only use this ability when red gauge is available.
 
-![Rage_Compressed2](https://github.com/user-attachments/assets/4f16bdee-40dc-47e9-be0e-9fd51bec82ed)
+![Rage_Compressed](https://github.com/user-attachments/assets/63b52ae0-3b7d-475f-90b3-e4a0c1bd5232)
 
 Roll - Press "Left Shift" to Roll (This ability is able to do either you equipped weapon or not).
 
