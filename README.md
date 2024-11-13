@@ -29,15 +29,18 @@ Attacking - Click "Left Mouse Button" to use light attack and click "Right Mouse
 
 FYI : Light attack has 4 montages and heavy attack has 2 montages, you can use combo by use light attack 3 times and before you use last light attack, click "Right mouse button" to use the last move of heavy attack as a combo.
 
-"Attack Combo"
+Attack Combo
 
-Special Attack 1 - Press "Q" + "Left Mouse Button" or "Right Mouse Button" to use special attacks.
+![Combo Attack_Comprressed](https://github.com/user-attachments/assets/543072f6-ca81-46f3-9bcc-40730c159f67)
+
+
+Special Attack - Press "Q" + "Left Mouse Button" or "Right Mouse Button" to use special attacks.
 
 "Special Attack 1" - Press "Q" + "Left Mouse Button"
 
 ![Special Light_Compressed](https://github.com/user-attachments/assets/471c48fa-7692-4818-aa92-c9adc5999738)
 
-Special Attack 2 - Press "Q" + "Right Mouse Button"
+"Special Attack 2" - Press "Q" + "Right Mouse Button"
 
 ![Special Heavy_Compressed](https://github.com/user-attachments/assets/4e11d372-95dd-4ea8-879b-4a3c0dbd1998)
 
@@ -55,12 +58,14 @@ Sheild - While character is equipped with weapon, press "Space bar" to generate 
 
 Perfect Guard - If you press shield at the right timing, you will see the different effect when enemy hit the shield that is a perfect guard. You can counter with last move of either light attack or heavy attack before the effect timing runout.
 
-Normal Guard
+"Normal Guard"
 
 ![Guard_Compressed](https://github.com/user-attachments/assets/0df17bed-dfd6-4566-9f45-3ccdfe4ad244)
 
-Perfect Guard
+"Perfect Guard"
+
 ![Perfect Guard_Compressed](https://github.com/user-attachments/assets/279014d4-c801-40fd-a813-46e92ad8fbea)
+
 
 Pick up Item - When you get close to drop item stone, Press "E" to collect them.
 
