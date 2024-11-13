@@ -21,7 +21,7 @@ Attacking - Click "Left Mouse Button" to use light attack and click "Right Mouse
 
 "Light Attack"
 
-![Light Attack_Compressed](https://github.com/user-attachments/assets/114f0d55-2661-4b3c-9cec-c15a5497fefe)
+![Light Attack_Compressed2](https://github.com/user-attachments/assets/6be64cff-e727-47b1-8d5c-ae2b71819bc0)
 
 "Heavy Attack"
 
